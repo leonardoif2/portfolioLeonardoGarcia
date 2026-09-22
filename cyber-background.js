@@ -85,7 +85,7 @@
       context.moveTo(0, y);
       context.lineTo(width, y);
     }
-    context.strokeStyle = "rgba(180, 216, 139, 0.065)";
+    context.strokeStyle = "rgba(255, 255, 255, 0.065)";
     context.lineWidth = 1;
     context.stroke();
   }
@@ -101,9 +101,9 @@
       greenY,
       Math.max(width, height) * 0.48
     );
-    greenGlow.addColorStop(0, "rgba(180, 216, 139, 0.13)");
-    greenGlow.addColorStop(0.42, "rgba(180, 216, 139, 0.035)");
-    greenGlow.addColorStop(1, "rgba(180, 216, 139, 0)");
+    greenGlow.addColorStop(0, "rgba(255, 255, 255, 0.13)");
+    greenGlow.addColorStop(0.42, "rgba(255, 255, 255, 0.035)");
+    greenGlow.addColorStop(1, "rgba(255, 255, 255, 0)");
     context.fillStyle = greenGlow;
     context.fillRect(0, 0, width, height);
 
@@ -117,8 +117,8 @@
       cyanY,
       Math.max(width, height) * 0.38
     );
-    cyanGlow.addColorStop(0, "rgba(120, 198, 176, 0.1)");
-    cyanGlow.addColorStop(1, "rgba(120, 198, 176, 0)");
+    cyanGlow.addColorStop(0, "rgba(255, 255, 255, 0.1)");
+    cyanGlow.addColorStop(1, "rgba(255, 255, 255, 0)");
     context.fillStyle = cyanGlow;
     context.fillRect(0, 0, width, height);
   }
@@ -137,7 +137,7 @@
         context.beginPath();
         context.moveTo(positions[first].x, positions[first].y);
         context.lineTo(positions[second].x, positions[second].y);
-        context.strokeStyle = `rgba(120, 198, 176, ${0.24 * (1 - distance / connectionDistance)})`;
+        context.strokeStyle = `rgba(255, 255, 255, ${0.24 * (1 - distance / connectionDistance)})`;
         context.lineWidth = 1;
         context.stroke();
 
@@ -148,7 +148,7 @@
 
           context.beginPath();
           context.arc(packetX, packetY, 1.6, 0, Math.PI * 2);
-          context.fillStyle = "rgba(205, 236, 169, 0.72)";
+          context.fillStyle = "rgba(255, 255, 255, 0.72)";
           context.fill();
         }
       }
@@ -160,19 +160,19 @@
 
       context.beginPath();
       context.arc(position.x, position.y, node.radius + pulse * 0.8, 0, Math.PI * 2);
-      context.fillStyle = "rgba(180, 216, 139, 0.62)";
+      context.fillStyle = "rgba(255, 255, 255, 0.62)";
       context.fill();
 
       context.beginPath();
       context.arc(position.x, position.y, 5 + pulse * 5, 0, Math.PI * 2);
-      context.strokeStyle = `rgba(180, 216, 139, ${0.14 + pulse * 0.1})`;
+      context.strokeStyle = `rgba(255, 255, 255, ${0.14 + pulse * 0.1})`;
       context.lineWidth = 0.9;
       context.stroke();
 
       if (index % 3 === 0) {
         context.font = `${phoneViewport.matches ? 8 : 9}px "IBM Plex Mono", monospace`;
         context.textAlign = "left";
-        context.fillStyle = "rgba(120, 198, 176, 0.38)";
+        context.fillStyle = "rgba(255, 255, 255, 0.38)";
         context.fillText(networkLabels[index % networkLabels.length], position.x + 8, position.y - 8);
       }
     });
@@ -200,8 +200,8 @@
         const alpha = column.alpha * fade * edgeVisibility;
 
         context.fillStyle = row === 0
-          ? `rgba(220, 245, 188, ${Math.min(alpha * 1.9, 0.82)})`
-          : `rgba(180, 216, 139, ${alpha})`;
+          ? `rgba(255, 255, 255, ${Math.min(alpha * 1.9, 0.82)})`
+          : `rgba(255, 255, 255, ${alpha})`;
         context.fillText(glyphs[glyphIndex], column.x, y);
       }
 
@@ -216,16 +216,16 @@
   function drawScanner(time) {
     const position = (time * 0.025) % (height + 160) - 80;
     const glow = context.createLinearGradient(0, position - 55, 0, position + 55);
-    glow.addColorStop(0, "rgba(120, 198, 176, 0)");
-    glow.addColorStop(0.5, "rgba(120, 198, 176, 0.085)");
-    glow.addColorStop(1, "rgba(120, 198, 176, 0)");
+    glow.addColorStop(0, "rgba(255, 255, 255, 0)");
+    glow.addColorStop(0.5, "rgba(255, 255, 255, 0.085)");
+    glow.addColorStop(1, "rgba(255, 255, 255, 0)");
     context.fillStyle = glow;
     context.fillRect(0, position - 55, width, 110);
 
     context.beginPath();
     context.moveTo(0, position);
     context.lineTo(width, position);
-    context.strokeStyle = "rgba(205, 236, 169, 0.16)";
+    context.strokeStyle = "rgba(255, 255, 255, 0.16)";
     context.lineWidth = 0.9;
     context.stroke();
   }
@@ -241,7 +241,7 @@
     context.moveTo(width - margin - arm, height - margin);
     context.lineTo(width - margin, height - margin);
     context.lineTo(width - margin, height - margin - arm);
-    context.strokeStyle = "rgba(180, 216, 139, 0.24)";
+    context.strokeStyle = "rgba(255, 255, 255, 0.24)";
     context.lineWidth = 1;
     context.stroke();
   }
