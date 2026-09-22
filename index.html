@@ -8,29 +8,34 @@
   <title>Leonardo García Flores | Cybersecurity Student</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <header class="site-header">
-    <img
-      class="menu-profile-photo"
-      src="assets/leonardo-garcia-flores.png?v=3"
-      alt="Leonardo Garcia Flores"
-    >
+    <span class="avatar-frame" aria-hidden="true">
+      <img
+        class="menu-profile-photo"
+        src="assets/leonardo-garcia-flores.png?v=3"
+        alt="Leonardo Garcia Flores"
+      >
+    </span>
     <a class="name" href="#inicio">Leonardo Garcia Flores</a>
     <p class="menu-profile-status"><span aria-hidden="true"></span> Buscando trabajo · 21 años</p>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
       Menú
     </button>
     <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
-      <a href="#perfil">Perfil</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#formacion">Formación</a>
-      <a href="#intereses">Intereses</a>
-      <a href="#tecnologias">Tecnologías</a>
-      <a href="proyectos.html">Proyectos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#perfil"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg>Perfil</a>
+      <a href="#experiencia"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Experiencia</a>
+      <a href="#formacion"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Formación</a>
+      <a href="#intereses"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>Intereses</a>
+      <a href="#tecnologias"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/></svg>Tecnologías</a>
+      <a href="proyectos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Proyectos</a>
+      <a href="blog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>Blog</a>
+      <a href="#contacto"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Contacto</a>
     </nav>
   </header>
 
@@ -38,7 +43,7 @@
     <section id="inicio" class="intro">
       <div class="intro-copy">
         <div class="availability"><span></span> Buscando trabajo actualmente</div>
-        <p class="role">Cybersecurity Student</p>
+        <p class="role" aria-live="polite"><span class="typed-text">Cybersecurity Student</span><span class="typing-caret" aria-hidden="true">▌</span></p>
         <h1>Leonardo García Flores</h1>
         <p class="introduction">
           Estudiante de Ingeniería en Ciberseguridad con interés en redes,
@@ -46,8 +51,14 @@
         </p>
         <div class="intro-links">
           <a class="primary-link" href="#contacto">Contactarme</a>
+          <a href="proyectos.html">Ver proyectos <span>↗</span></a>
           <a href="#perfil">Conocer mi perfil <span>↓</span></a>
         </div>
+        <dl class="hero-stats">
+          <div><dt>Sitios publicados</dt><dd>2</dd></div>
+          <div><dt>Herramientas en GitHub</dt><dd>5</dd></div>
+          <div><dt>Categorías técnicas</dt><dd>9</dd></div>
+        </dl>
       </div>
       <figure class="portrait">
         <img
@@ -143,15 +154,28 @@
         <span>04</span>
         <h2>Áreas de interés</h2>
       </div>
-      <div class="section-content interest-list">
-        <p><strong>SOC</strong><span>Monitoreo, detección y respuesta ante incidentes</span></p>
-        <p><strong>NOC</strong><span>Monitoreo y administración de redes</span></p>
-        <p><strong>Informática forense</strong></p>
-        <p><strong>Seguridad de redes</strong></p>
-        <p><strong>Infraestructura empresarial</strong></p>
-        <p><strong>Hacking ético y Pentesting</strong></p>
-        <p><strong>Auditoría de seguridad informática</strong></p>
-        <p><strong>Seguridad defensiva y análisis de amenazas</strong></p>
+      <div class="section-content">
+        <div class="interest-group">
+          <h3>Ciberseguridad e infraestructura</h3>
+          <div class="interest-grid">
+            <p><strong>SOC</strong><span>Monitoreo, detección y respuesta ante incidentes</span></p>
+            <p><strong>NOC</strong><span>Monitoreo y administración de redes</span></p>
+            <p><strong>Informática forense</strong><span>Análisis de evidencia digital</span></p>
+            <p><strong>Seguridad de redes</strong><span>Protección de comunicaciones</span></p>
+            <p><strong>Infraestructura empresarial</strong><span>Sistemas y servicios corporativos</span></p>
+            <p><strong>Hacking ético y Pentesting</strong><span>Pruebas ofensivas controladas</span></p>
+            <p><strong>Auditoría de seguridad</strong><span>Evaluación de controles</span></p>
+            <p><strong>Seguridad defensiva</strong><span>Detección y mitigación de amenazas</span></p>
+          </div>
+        </div>
+        <div class="interest-group">
+          <h3>Programación y desarrollo</h3>
+          <div class="interest-grid">
+            <p><strong>Desarrollo Backend</strong><span>APIs, lógica y servidores</span></p>
+            <p><strong>Desarrollo Frontend</strong><span>Interfaces y experiencia web</span></p>
+            <p><strong>Desarrollo de herramientas</strong><span>Utilidades y automatización en Python</span></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -173,14 +197,14 @@
           <h3>Seguridad de endpoints</h3>
           <ul class="tech-badges">
             <li><img src="https://cdn.simpleicons.org/microsoft/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Microsoft Defender</span></li>
-            <li><span>SentinelOne</span></li>
-            <li><span>EDR</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/></svg><span>SentinelOne</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><circle cx="12" cy="11" r="2.5"/></svg><span>EDR</span></li>
           </ul>
         </article>
         <article>
           <h3>Pentesting</h3>
           <ul class="tech-badges">
-            <li><img src="https://cdn.simpleicons.org/nmap/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Nmap</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/><path d="M12 12l6-6"/></svg><span>Nmap</span></li>
             <li><img src="https://cdn.simpleicons.org/kalilinux/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Kali Linux</span></li>
           </ul>
         </article>
@@ -193,13 +217,13 @@
         <article>
           <h3>Redes</h3>
           <ul class="tech-badges">
-            <li><span>TCP/IP</span></li>
-            <li><span>DNS</span></li>
-            <li><span>DHCP</span></li>
-            <li><span>VLAN</span></li>
-            <li><span>VPN</span></li>
-            <li><span>HTTP/HTTPS</span></li>
-            <li><span>SSH</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span>TCP/IP</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg><span>DNS</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg><span>DHCP</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="1"/><rect x="14" y="4" width="7" height="16" rx="1"/></svg><span>VLAN</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>VPN</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg><span>HTTP/HTTPS</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="14" r="4"/><path d="M11 11l8-8M16 4l3 3M13 7l3 3"/></svg><span>SSH</span></li>
             <li><img src="https://cdn.simpleicons.org/cisco/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Cisco Meraki</span></li>
             <li><img src="https://cdn.simpleicons.org/cisco/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Packet Tracer</span></li>
           </ul>
@@ -211,7 +235,7 @@
             <li><img src="https://cdn.simpleicons.org/kalilinux/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Kali Linux</span></li>
             <li><img src="https://cdn.simpleicons.org/ubuntu/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Ubuntu</span></li>
             <li><img src="https://cdn.simpleicons.org/archlinux/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Arch Linux</span></li>
-            <li><img src="https://cdn.simpleicons.org/windows/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Windows</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg><span>Windows</span></li>
             <li><img src="https://cdn.simpleicons.org/apple/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>macOS</span></li>
           </ul>
         </article>
@@ -220,14 +244,14 @@
           <ul class="tech-badges">
             <li><img src="https://cdn.simpleicons.org/python/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Python</span></li>
             <li><img src="https://cdn.simpleicons.org/gnubash/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Bash</span></li>
-            <li><img src="https://cdn.simpleicons.org/powershell/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>PowerShell</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M13 15h4"/></svg><span>PowerShell</span></li>
           </ul>
         </article>
         <article>
           <h3>Programación</h3>
           <ul class="tech-badges">
             <li><img src="https://cdn.simpleicons.org/python/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>Python</span></li>
-            <li><img src="https://cdn.simpleicons.org/csharp/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>C#</span></li>
+            <li><img class="keep-color" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>C#</span></li>
             <li><img src="https://cdn.simpleicons.org/cplusplus/white" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><span>C++</span></li>
           </ul>
         </article>
@@ -240,9 +264,72 @@
       </div>
     </section>
 
-    <section id="contacto" class="content-section contact">
+    <section id="proyectos-destacados" class="content-section">
       <div class="section-label">
         <span>06</span>
+        <h2>Proyectos destacados</h2>
+      </div>
+      <div class="section-content">
+        <div class="project-list preview-list">
+          <article class="project-card">
+            <div class="project-number">01</div>
+            <div class="project-card-content">
+              <p class="project-status">Desarrollo web · Mantenimiento activo</p>
+              <h3>Artika Servicios Integrales</h3>
+              <p>Sitio corporativo en producción. Actualmente a cargo de su actualización y mantenimiento.</p>
+              <a class="project-link" href="https://artikaserviciosintegrales.com.mx/" target="_blank" rel="noopener noreferrer">Visitar sitio web <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-number">02</div>
+            <div class="project-card-content">
+              <p class="project-status">Desarrollo web · Mantenimiento activo</p>
+              <h3>Red Kinesis</h3>
+              <p>Sitio corporativo de movilidad y logística. Responsable de sus actualizaciones y mantenimiento continuo.</p>
+              <a class="project-link" href="https://redkinesis.com.mx/" target="_blank" rel="noopener noreferrer">Visitar sitio web <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-number">03</div>
+            <div class="project-card-content">
+              <p class="project-status">Ciberseguridad · Python · Código abierto</p>
+              <h3>Generador de Contraseñas Seguras</h3>
+              <p>Herramienta web y CLI para crear contraseñas robustas, con repositorio público y documentación.</p>
+              <a class="project-link" href="https://github.com/leonardoif2/GeneradorContrase-asSeguras" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+        <a class="primary-link preview-all" href="proyectos.html">Ver todos los proyectos <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- Preview del blog: cuando publiques notas en blog.html,
+         puedes duplicar esta tarjeta por nota cambiando
+         título, texto y href="blog.html#id-de-la-nota". -->
+    <section id="blog" class="content-section">
+      <div class="section-label">
+        <span>07</span>
+        <h2>Blog</h2>
+      </div>
+      <div class="section-content">
+        <div class="project-list preview-list">
+          <article class="project-card">
+            <div class="project-number">01</div>
+            <div class="project-card-content">
+              <p class="project-status">Blog · En preparación</p>
+              <h3>Notas en camino</h3>
+              <p>Estoy preparando las primeras notas sobre redes, ciberseguridad y Python.</p>
+              <a class="project-link" href="blog.html">Ir al blog <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+        <a class="primary-link preview-all" href="blog.html">Ver todas las notas <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section id="contacto" class="content-section contact">
+      <div class="section-label">
+        <span>08</span>
         <h2>Contacto</h2>
       </div>
       <div class="section-content">
@@ -262,32 +349,41 @@
             <strong>55 4792 6150</strong>
             <small>Abrir conversación ↗</small>
           </a>
-          <a href="mailto:leogarciaf2105@gmail.com">
-            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="14" rx="2"/>
-              <path d="m4 7 8 6 8-6"/>
-            </svg>
-            <span>Correo principal</span>
-            <strong>leogarciaf2105@gmail.com</strong>
-            <small>Enviar correo ↗</small>
-          </a>
-          <a href="mailto:leofg2105@gmail.com">
-            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="14" rx="2"/>
-              <path d="m4 7 8 6 8-6"/>
-            </svg>
-            <span>Correo alternativo</span>
-            <strong>leofg2105@gmail.com</strong>
-            <small>Enviar correo ↗</small>
-          </a>
+          <div class="contact-card-wrap">
+            <a href="mailto:leogarciaf2105@gmail.com">
+              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="m4 7 8 6 8-6"/>
+              </svg>
+              <span>Correo principal</span>
+              <strong>leogarciaf2105@gmail.com</strong>
+              <small>Enviar correo ↗</small>
+            </a>
+            <button class="copy-btn" type="button" data-copy="leogarciaf2105@gmail.com">Copiar correo</button>
+          </div>
+          <div class="contact-card-wrap">
+            <a href="mailto:leofg2105@gmail.com">
+              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="m4 7 8 6 8-6"/>
+              </svg>
+              <span>Correo alternativo</span>
+              <strong>leofg2105@gmail.com</strong>
+              <small>Enviar correo ↗</small>
+            </a>
+            <button class="copy-btn" type="button" data-copy="leofg2105@gmail.com">Copiar correo</button>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Leonardo García Flores</p>
+    <p>Leonardo García Flores · <span id="year">2026</span></p>
+    <button id="to-top" type="button" aria-label="Volver arriba">↑ Arriba</button>
   </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
 
   <script src="cyber-background.js?v=2"></script>
   <script src="script.js?v=2"></script>
