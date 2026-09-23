@@ -204,11 +204,6 @@ sections.forEach((section) => observer.observe(section));
 
 /* Copiar correo con aviso */
 (() => {
-  const emptyNotice = document.querySelector(".blog-empty");
-  if (emptyNotice && document.querySelector(".post")) {
-    emptyNotice.remove();
-  }
-
   const toast = document.querySelector(".toast");
   let timer = null;
   function notify(message) {
